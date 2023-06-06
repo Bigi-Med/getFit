@@ -1,8 +1,19 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./LandingPage.css"
+import Popup from "../handle-registration/signin-out-popup.js"
 function LandingPage()
 {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = () => {
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
 
   const joinButton = useRef();
 
@@ -46,7 +57,11 @@ function LandingPage()
           <p className="intro">Share and explore new recipes</p>
           <p className="introDescription">Join our community of thousands of fitness enthusiasts, who also happend to love exploring and sharing new recipes!</p>
           <div className="Join-container" ref={joinButton}>
-            <button className='join-button'> Join Now!</button>
+            <button className='join-button' onClick={handleOpen}> Join Now!</button>
+            <Popup isOpen={isOpen} onClose={handleClose}>
+            <h2>Popup Content</h2>
+            <p>This is the content of the popup.</p>
+      </Popup>
           </div>
         </div>
   )
