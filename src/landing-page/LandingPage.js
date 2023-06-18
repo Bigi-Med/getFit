@@ -2,6 +2,8 @@ import React, {useEffect, useRef, useState} from 'react'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./LandingPage.css"
 import Popup from "../handle-registration/signin-out-popup.js"
+import Login from "../handle-registration/loginForm.js"
+import LoginForm from '../handle-registration/loginForm.js'
 function LandingPage()
 {
 
@@ -59,8 +61,7 @@ function LandingPage()
           <div className="Join-container" ref={joinButton}>
             <button className='join-button' onClick={handleOpen}> Join Now!</button>
             <Popup isOpen={isOpen} onClose={handleClose}>
-            <h2>Popup Content</h2>
-            <p>This is the content of the popup.</p>
+              <LoginForm/>
       </Popup>
           </div>
         </div>
