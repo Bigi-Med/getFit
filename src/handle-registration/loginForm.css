@@ -1,10 +1,22 @@
-.google-login{
-    background-image: url('../../assets/gmail.png');
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after{
+box-sizing: inherit;
+}
+
+.card-container{
+    background-color: #808080;
+}
+
+#email-icon{
+    display:inline-block;
+}
+
+#email-input{
+    display:inline-block;
 }
 
 
-
-.test{
-    border-radius: 20px;
-}
 

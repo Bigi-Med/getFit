@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import "./signin-out-popup.css";
 const Popup = ({ isOpen, onClose, children }) => {
@@ -13,6 +15,33 @@ const Popup = ({ isOpen, onClose, children }) => {
             X
           </button>
           {children}
+          <div className="top-section">
+              <h2>Sign in</h2>
+          </div>
+
+          <div className="middle-section">
+          <form>
+            <div id="email">
+              <div id="email-icon" >
+                <FontAwesomeIcon icon={faEnvelope}/>
+              </div><div id="email-input" >
+                <input type="email" placeholder='email' ></input>
+              </div>
+            </div>
+         </form>
+          </div>
+          <div className="bottom-section">
+            <form>
+              <div id="password">
+                <div id="password-icon">
+                  <FontAwesomeIcon icon={faLock}/>
+                </div>
+              <div id="password-input">
+                <input type="password"  placeholder='password' />
+              </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
+import "./loginForm.css";
 
 const LoginForm = () => {
   const handleLogin = () => {
@@ -8,25 +9,38 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
-      <h2>Sign in</h2>
+    <div className="card-container">
+
+      <div>
+        <h2>Sign in</h2>
+      </div>
+      
+      <div className="container">
       <form>
-       
        <div id="email">
-       <FontAwesomeIcon icon={faEnvelope} style={{backgroundColor:'red', marginLeft:'-3%' , paddingRight:'1%', paddingTop:'1%' , paddingBottom:'1%',paddingLeft:'1%', position:'fixed'}} />
-          <input type="email" style={{  marginBottom:'20%', marginLeft:'2%', paddingBottom:'6%' }} placeholder='email' ></input>
+        <div id="email-icon" >
+          <FontAwesomeIcon icon={faEnvelope}/>
+        </div><div id="email-input" >
+          <input type="email" placeholder='email' ></input>
         </div>
-
+      </div>
+      <div id="password">
         
-        <div id="password">
-        <FontAwesomeIcon icon={faLock} style = {{backgroundColor:'red', marginLeft:'-3%' , paddingRight:'1%', paddingTop:'1%' , paddingBottom:'1%',paddingLeft:'1%', position:'fixed'}} />
-          <input type="password" style={{   marginBottom:'20%', marginLeft:'2%', paddingBottom:'6%' }} placeholder='password' />
+        <div id="password-icon" style = {{ display:'inline-block'}}>
+          <FontAwesomeIcon icon={faLock}/>
         </div>
-
+        <div id="password-input" style = {{ display:'inline-block'}}>
+          <input type="password" style={{   marginBottom:'20%', marginLeft:'-2.5%', paddingBottom:'6.62%' }} placeholder='password' />
+        </div>
+      </div>
+       
         <button type="button" onClick={handleLogin}>
           Login
         </button>
-      </form>
+
+        </form>
+      </div>
+
       <div>
         <p>Or login with:</p>
         <button className="google-login" >

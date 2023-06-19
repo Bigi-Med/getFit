@@ -61,7 +61,6 @@ function LandingPage()
           <div className="Join-container" ref={joinButton}>
             <button className='join-button' onClick={handleOpen}> Join Now!</button>
             <Popup isOpen={isOpen} onClose={handleClose}>
-              <LoginForm/>
       </Popup>
           </div>
         </div>
