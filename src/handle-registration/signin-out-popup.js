@@ -15,8 +15,8 @@ const Popup = ({ isOpen, onClose, children }) => {
             X
           </button>
           {children}
+          <div className='form'>
           <div className="top-section">
-              <h2>Sign in</h2>
           </div>
 
           <div className="middle-section">
@@ -25,7 +25,7 @@ const Popup = ({ isOpen, onClose, children }) => {
               <div id="email-icon" >
                 <FontAwesomeIcon icon={faEnvelope}/>
               </div><div id="email-input" >
-                <input type="email" placeholder='email' ></input>
+                <input type="email" placeholder='email' style={{paddingTop:'3.3%', paddingBottom:'3.498%', borderBlockStyle:'none'}} ></input>
               </div>
             </div>
          </form>
@@ -37,12 +37,16 @@ const Popup = ({ isOpen, onClose, children }) => {
                   <FontAwesomeIcon icon={faLock}/>
                 </div>
               <div id="password-input">
-                <input type="password"  placeholder='password' />
+                <input type="password"  placeholder='password' style={{paddingTop:'3.3%', paddingBottom:'3.3%', borderBlockStyle:'none'}} />
               </div>
               </div>
             </form>
           </div>
+          </div>
         </div>
+          <div className='login'>
+            <button>Login</button>
+          </div>
       </div>
     );
   };

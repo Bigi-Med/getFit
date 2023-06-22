@@ -19,11 +19,13 @@ box-sizing: inherit;
   }
   
   .popup-content {
-    background-color: rgb(224, 221, 221);
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top:5%;
-    padding-bottom:5%
+    background-color: #212121;
+    width:20%;
+    border-radius:30px;
+    height:40%;
+    display: block;
+
+
   }
   
   .close-button {
@@ -32,8 +34,19 @@ box-sizing: inherit;
     right: 10px;
   }
 
+  .form{
+    width:100%;
+    margin-left:15%;
+    margin-top:30%;
+  }
   #email-icon{
       display:inline-block;
+      padding-top:2%;
+      padding-bottom:2%;
+      padding-right:3%;
+      padding-left:3%;
+      background-color: white;
+
   }
   
   #email-input{
@@ -42,12 +55,27 @@ box-sizing: inherit;
 
   #password-icon{
     display: inline-block;
+    padding-top:2%;
+    padding-bottom:2%;
+    padding-right:3%;
+    padding-left:3%;
+    background-color: white;
   }
 
   #password-input{
     display: inline-block;
   }
+
+  .top-section{
+    margin-bottom: 5%;;
+  }
+
+  .middle-section{
+    margin-bottom: 5%;
+  }
   
+  .bottom-section{
+  }
   
   
   
